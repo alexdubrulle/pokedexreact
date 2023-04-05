@@ -11,8 +11,9 @@ const pokemonList = [
     },
 ];
 
-function PokemonCard() {
-    let pokemon = pokemonList[1]
+function PokemonCard(props) {
+    console.log(props)
+    const pokemon = props.pokemon;
     return (
         <div>
             <figure>
