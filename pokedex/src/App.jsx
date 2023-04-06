@@ -1,11 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import './components/PokemonCard'
 import PokemonCard from './components/PokemonCard'
 
-function App() {
 const pokemonList = [{
   name: "bulbasaur",
   imgSrc:
@@ -15,8 +11,9 @@ const pokemonList = [{
   name: "mew",
 },
 ];
+function App() {
   return (<div>
-    <PokemonCard pokemon = {pokemonList[0]} />
+    <PokemonCard name ={pokemonList[1].name} imgSrc = {pokemonList[1].imgSrc} />
   </div>
   );
 }
