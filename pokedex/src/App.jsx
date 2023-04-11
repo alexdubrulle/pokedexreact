@@ -34,16 +34,16 @@ function App() {
     },
   ];
 
-
+  const selectPokemon = (index) => { setPokemonIndex(index) }
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
 
-  return (<div>
+  return (
 
-    <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-    <NavBar pokemonIndex={pokemonIndex} setPokemonIndex={setPokemonIndex} pokemonList={pokemonList} />
-
-  </div>
+    <div>
+      <PokemonCard pokemon={pokemonList[pokemonIndex]} />
+      <NavBar onSelect={selectPokemon} pokemonList={pokemonList} />
+    </div>
   );
 
 }
